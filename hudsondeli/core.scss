@@ -1,0 +1,49 @@
+@import "base";
+
+body {
+	@include body($bgcolor: $site-bg-color);
+}
+
+body > header,
+body > div,
+body > footer {
+	@include body-children();
+}
+
+.page > div {
+	@include c-f-w();
+}
+
+a, a:link, a:visited, a:active {
+	@include link-defaults();
+}
+a:hover, a:focus {
+	@include link-hover();
+}
+
+.hidden {
+	display: none;
+}
+
+.c-f-w {
+	@include c-f-w();
+}
+
+h1 {
+	@extend .hidden;
+}
+
+p + p {
+	margin-top: 10px;
+}
+
+q:before,
+q:hover:before {
+	@include quote-before();
+}
+
+q:after,
+q:hover:after {
+	@include quote-after();
+}
+

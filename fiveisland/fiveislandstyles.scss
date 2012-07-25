@@ -1,0 +1,186 @@
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:::::::::::::: Restaurants Platform :::::::::::::://
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//::::::::::::::::::: Hudson Deli :::::::::::::::::://
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Master Site Variables
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+$site-width: 860px;
+$site-font: 100%/1.5 "Times New Roman", Times, Baskerville, Georgia, serif;
+$master-color: #152228;
+$secondary-color: #5BA7D8;
+$std-text-color: #666;
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Core Structure
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@import "core";
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Header
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+body > header {
+	padding: 20px 0 0;
+}
+.logo {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	z-index: 100;
+}
+.header {
+	background: $master-color;
+	float: left;
+	width: 100%;
+}
+.header_logo {
+	background: #FFF;
+	margin: 10px 10px 0 10px;
+	padding: 5px;
+}
+.header_logo p {
+	border: 1px solid #CCC;
+	color: $master-color;
+	font-size: 2.5em;
+	letter-spacing: 3px;
+	line-height: 2;
+	padding-left: 35px;
+	text-shadow: -3px 3px 4px #AAA;
+	text-transform: uppercase;
+}
+.header nav {
+	font-size: 1.25em;
+	padding: 5px 0;
+}
+.header nav ul {
+	padding-left: 20px;
+}
+.header nav li {
+	display: inline-block;
+	vertical-align: bottom;
+	text-transform: uppercase;
+}
+.header nav li + li {
+	margin-left: 45px;
+}
+.header nav li a {
+	color: #FFF;
+}
+.header nav li.active-trail a,
+.header nav li a:active,
+.header nav li a:hover {
+	color: $secondary-color;
+	text-decoration: none;
+}
+.active-trail {
+	font-weight: normal;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Footer
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include footer();
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Slider
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include main-slide-show($slideshow-block: ".views_slideshow_main", $margin: 0 0 20px);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information - Tweeted Hours
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include site-hours-tweeted($tweeted-hours-block: "#block-views-site-tweets-block");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information  - Geo Info (Home)
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include five-islands-geo-info("#block-views-restaurant-information-block");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Travel Channel Video
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include image-text-video ("#block-block-13");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Seasonal Hours
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include seasonal-hours ("#block-views-restaurant-information-block-5");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include yelp-badge ("#block-block-5");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: UrbanSpoon Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include urban-spoon-badge ("#block-block-9");
+.path-reviews	#block-block-9 {
+	margin-left: 95px;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Trip Advisor Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include trip-advisor-badge ("#block-block-12");
+.path-reviews	#block-block-12 {
+	float: left;
+	margin-left: 95px;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Facebook Plugin
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include facebook ("#block-block-2");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Reviews Block
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include yelp-reviews("#block-block-7");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Reviews
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include restaurant-reviews(".view-display-id-rest_review_listing");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Articles
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include articles ("article.node-page");
+.front article.node-page {
+	margin-top: 55px;
+
+	.content img {
+		@include box-shadow ();
+		margin: 5px 10px 5px 0;
+	}
+}
+.path-menu article.node-page {
+	margin-top: 10px;
+	width: 100%;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Lobster Shacks
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+.path-lobster-shacks article.node-page {
+	width: 820px;
+	margin-right: 20px;
+}
+.path-lobster-shacks article.node-page img {
+	@include box-shadow ();
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+.path-lobster-shacks article.node-page strong {
+	color: $master-color;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Menu
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include menu ();
+
+

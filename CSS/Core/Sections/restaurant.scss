@@ -1,0 +1,1504 @@
+/**************************************************/
+/********** : Restaurants Platform : **************/
+/**************************************************/
+/*************** : Hudson Deli : ******************/
+/**************************************************/
+
+/**************************************************/
+/*** Structure ************************************/
+/**************************************************/
+
+body {
+	font: 100%/1.5 "Times New Roman", Times, Baskerville, Georgia, serif;
+  text-align: center;
+  background-color: #F9F9F9;
+  color: #666;
+}
+body > header,
+body > div,
+body > footer {
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+  text-align: left;
+  width: 860px;
+}
+.page > div {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+/**************************************************/
+/*** Specials Cases *******************************/
+/**************************************************/
+.hidden,
+h1,
+.path-reviews article.node-page,
+#block-views-site-tweets-block .more-link,
+.path-reviews article .field-type-text-with-summary {
+	display: none;
+}
+.c-f-w {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.clear {
+	clear: both;
+}
+p + p {
+	margin-top: 10px;
+}
+q:before,
+q:hover:before {
+	color: #152228;
+	content: '\201C';
+	font-size: 1.6em;	
+	font-style: normal;
+}
+q:after,
+q:hover:after {
+	color: #152228;
+	content: '\201D';
+	font-size: 1.6em;	
+	font-style: normal;
+}
+a, a:link, a:visited, a:active {color: #666;text-decoration: none;}
+a:hover, a:focus {color: #000;text-decoration: underline;}
+
+/**************************************************/
+/*** Header ***************************************/
+/**************************************************/
+body > header {
+	padding: 20px 0 0;
+}
+.logo {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	z-index: 100;
+}
+.header {
+	background: #152228;
+	float: left;
+	width: 100%;
+}
+.header_logo {
+	background: #FFF;
+	margin: 10px 10px 0 10px;
+	padding: 5px;
+}
+.header_logo p {
+	border: 1px solid #CCC;
+	color: #152228;
+	font-size: 2.5em;
+	letter-spacing: 3px;
+	line-height: 2;
+	padding-left: 35px;
+	text-shadow: -3px 3px 4px #AAA;
+	text-transform: uppercase;
+}
+.header nav {
+	font-size: 1.25em;
+	padding: 5px 0;
+}
+.header nav ul {
+	padding-left: 20px;
+}
+.header nav li {
+	display: inline-block;
+	vertical-align: bottom;
+	text-transform: uppercase;
+}
+.header nav li + li {
+	margin-left: 45px;
+}
+.header nav li a {
+	color: #FFF;
+		-webkit-transition: color .1s linear;
+		-moz-transition: color .1s linear;
+		-o-transition: color .1s linear;
+	transition: color .1s linear;
+}
+.header nav li.active-trail a,
+.header nav li a:active,
+.header nav li a:hover {
+	color: #5BA7D8;
+	text-decoration: none;
+}
+.active-trail {
+	font-weight: normal;
+}
+
+/**************************************************/
+/*** Footer ***************************************/
+/**************************************************/
+body > footer {
+	margin-top: 40px;
+}
+body > footer .views-field {
+	padding: 10px 20px;
+}
+.views-field-field-ri-footer {
+	background: #152228;
+	clear: both;
+	color: #FFF;
+	float: left;
+	font-size: 0.8em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	width: 820px;
+}
+.views-field-field-ri-footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+.views-field-field-ri-footer .company {
+	float: left;
+	width: 340px;
+}
+.views-field-field-ri-footer .phone {
+	float: left;
+	width: 100px;
+}
+.views-field-field-ri-footer .address {
+	float: left;
+	text-align: right;
+	width: 380px;
+}
+.views-field-field-ri-copyright {
+	font-size: 0.7em;
+}
+
+/**************************************************/
+/*** Restaurant Slider ****************************/
+/*** block-views-restaurant-information-block-1 ***/
+/**************************************************/
+.views_slideshow_main {
+	float: left;
+	height: 290px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+
+/**************************************************/
+/*** Restaurant Information - Tweeted Hours *******/
+/*** block-views-site-tweets-block ****************/
+/**************************************************/
+#block-views-site-tweets-block {
+	background: #152228;
+	color: #FFF;
+	float: left;
+	font-size: 1.25em;
+	height: 80px;
+	left: 20px;
+	line-height: 1.2;
+	padding: 10px 20px 0;
+	position: absolute;
+	top: 20px;
+	width: 260px;
+	z-index: 100;
+}
+#block-views-site-tweets-block.contextual-links-region {
+	top: 51px;
+}
+.rgba #block-views-site-tweets-block,
+.rgba #block-views-restaurant-information-block {
+	background: rgba(21,34,40,0.9);
+}
+#block-views-site-tweets-block h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+#block-views-site-tweets-block .view-site-tweets {
+	background: #FFF;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #152228;
+	font-size: 20px;
+	height: 45px;
+	margin-top: 3px;
+	text-align: center;
+}
+#block-views-site-tweets-block .view-site-tweets.two_lines {
+	font-size: 17px;
+	height: 40px;
+	line-height: 1.2;
+	padding: 3px 0 2px;
+}
+#block-views-site-tweets-block .item-list {
+	
+}
+#block-views-site-tweets-block .item-list ul {
+	margin: 0;
+	padding: 9px 0 0;
+}
+#block-views-site-tweets-block .two_lines .item-list ul {
+	padding: 0;
+}
+#block-views-site-tweets-block .item-list li {
+	margin: 0;
+	padding: 0 5px;
+}
+#block-views-site-tweets-block .item-list span {
+
+}
+#block-views-site-tweets-block .item-list span span {
+
+}
+
+/**************************************************/
+/*** Restaurant Information  - Geo Info (Home) ****/
+/*** block-views-restaurant-information-block *****/
+/**************************************************/
+#block-views-restaurant-information-block {
+	background: #152228;
+	color: #FFF;
+	float: left;
+	height: 160px;
+	font-size: 1.25em;
+	left: 20px;
+	line-height: 1.2;
+	padding: 0 20px 0;
+	position: absolute;
+	top: 110px;
+	width: 260px;
+	z-index: 100;
+}
+#block-views-restaurant-information-block.contextual-links-region {
+	top: 141px;
+}
+#block-views-restaurant-information-block .views-field-field-ri-address p {
+	display: block;
+	margin-top: 0;
+}
+#block-views-restaurant-information-block .views-field-field-ri-telephone {
+
+}
+#block-views-restaurant-information-block .views-field-field-ri-email {
+
+}
+#block-views-restaurant-information-block .views-field-field-credit-cards {
+	margin-top: 15px;
+}
+#block-views-restaurant-information-block a {
+	color: #FFF;
+}
+
+/**************************************************/
+/*** Travel Channel Video *************************/
+/**************************************************/
+#block-block-13 {
+	float: left;
+	margin: 0 0 30px 20px;
+	width: 300px;
+}
+.travel_channel p {
+	color: #152228;
+	display: block;
+	font-size: 1.25em;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#block-block-13 object {
+	float: left;
+}
+
+/**************************************************/
+/*** Seasonal Hours ********************/
+/**************************************************/
+#block-views-restaurant-information-block-5 {
+	background: #152228;
+	float: left;
+	margin: 0 0 30px 20px;
+	width: 300px;
+}
+#block-views-restaurant-information-block-5 h2 {
+	color: #FFF;
+	font-size: 1.25em;
+	font-size: 1.25em;
+	line-height: 2;
+	text-align: center;
+	text-transform: uppercase;
+	text-align: center;
+}
+#block-views-restaurant-information-block-5 .view-restaurant-information {
+	background: #FFF;
+	color: #152228;
+	font-size: 1.125em;
+	line-height: 1.2;
+	margin: 0 10px 10px;
+	padding: 10px;
+}
+#block-views-restaurant-information-block-5 p + p {
+	margin-top: 0;
+}
+
+/**************************************************/
+/*** Yelp Block ***********************************/
+/**************************************************/
+#block-block-5 {
+	float: left;
+	margin: 0 0 10px 20px;
+	width: 125px;
+}
+#block-block-5 img {
+	float: left;
+}
+
+/**************************************************/
+/*** UrbanSpoon Block *****************************/
+/**************************************************/
+#block-block-9 {
+	float: left;
+	margin: 0 0 10px 10px;
+	width: 165px;
+}
+.path-reviews	#block-block-9 {
+	margin-left: 95px;
+}
+#block-block-9 div img {
+	margin: 7px auto 0px;
+}
+#block-block-9 #us_widget {
+	float: left;
+	width: 163px;
+}
+
+/**************************************************/
+/*** Trip Advisor Block ***************************/
+/**************************************************/
+#block-block-12 {
+	clear: left;
+	float: right;
+	margin: 0 42px 10px 0;
+	width: 163px;
+}
+.path-reviews	#block-block-12 {
+	float: left;
+	margin-left: 95px;
+}
+#CDSWIDEXC {
+	margin: 0 !important;
+	width: 100% !important;
+}
+
+/**************************************************/
+/*** Facebook *************************************/
+/**************************************************/
+#block-block-2 {
+	float: left;
+	margin: 0 0 30px 20px;
+	width: 300px;
+}
+.fb-like-box * {
+	max-width: 300px;
+}
+
+/**************************************************/
+/*** Yelp Reviews Block ***************************/
+/**************************************************/
+#block-block-7 {
+	float: left;
+	margin: 0 0 30px 20px;
+	width: 300px;
+}
+#yelpreviews header img {
+	float: left;
+	margin: 0 13px 10px 0;
+}
+#yelpreviews header div {
+	float: left;
+	margin-top: 10px;
+}
+#yelpreviews header div img {
+	margin: 0;
+}
+#yelpreviews article {
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+}
+#yelpreviews article + article {
+	margin-top: 20px;
+}
+#yelpreviews .yelp_review {
+	float: right;
+	width: 175px;
+}
+#yelpreviews .yelp_review .date {
+	font-size: 0.75em;
+}
+#yelpreviews .yelp_review .review {
+	margin: 0;
+}
+#yelpreviews .yelp_review .review a {
+	color: #666;
+	text-decoration: underline;
+}
+#yelpreviews .yelp_review .review a:hover {
+	color: #152228;
+}
+#yelpreviews .yelpuser {
+	float: left;
+	width: 104px;
+}
+#yelpreviews .yelpuser img {
+	border: 2px solid #666;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/**************************************************/
+/*** Restaurant Reviews ***************************/
+/**************************************************/
+.view-display-id-rest_review_listing {
+	clear: both;
+	float: right;
+	width: 500px;
+}
+.view-display-id-rest_review_listing > div {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.view-display-id-rest_review_listing > div + div {
+	border-top: 2px solid #152228;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.view-display-id-rest_review_listing .views-field-field-rr-images {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+.view-display-id-rest_review_listing .views-field-field-rr-quote-text {
+	margin-bottom: 5px;
+	font-style: italic;
+}
+.view-display-id-rest_review_listing .views-field-field-review-link-1 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+.view-display-id-rest_review_listing .views-field-field-rr-by {
+	float: right;
+	margin-top: 10px;
+}
+.view-restaurant-reviews q {
+	color: #152228;
+	font-size: 1.25em;
+	line-height: 26px;
+}
+.view-restaurant-reviews .views-field-field-rr-by > * {
+	display: inline;
+}
+.view-display-id-rest_review_listing .views-field-field-review-link-1 a {
+	color: #666;
+	text-decoration: underline;
+}
+.view-display-id-rest_review_listing .views-field-field-review-link-1 a:hover {
+	color: #152228;
+}
+
+/**************************************************/
+/*** Articles *************************************/
+/**************************************************/
+article.node-page {
+	clear: both;
+	float: right;
+	width: 500px;
+}
+article.node-page a {
+	text-decoration: underline;
+}
+.front article.node-page {
+	margin-top: 55px;
+}
+article.node-page .content a {
+	color: #666;
+	text-decoration: underline;
+}
+article.node-page .content a:hover {
+	color: #152228;
+}
+.front article.node-page .content img {
+		-moz-box-shadow: -4px 4px 5px 0px #666;
+		-webkit-box-shadow: -4px 4px 5px 0px #666;
+	box-shadow: -4px 4px 5px 0px #666;
+	margin: 5px 10px 5px 0;
+}
+.path-menu article.node-page {
+	margin-top: 10px;
+	width: 100%;
+}
+
+/**************************************************/
+/*** Lobster Shacks *******************************/
+/**************************************************/
+.path-lobster-shacks article.node-page {
+	width: 820px;
+	margin-right: 20px;
+}
+.path-lobster-shacks article.node-page img {
+		-moz-box-shadow: -4px 4px 5px 0px #666;
+		-webkit-box-shadow: -4px 4px 5px 0px #666;
+	box-shadow: -4px 4px 5px 0px #666;
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+.path-lobster-shacks article.node-page strong {
+	color: #152228;
+	
+}
+
+/**************************************************/
+/*** Menus ****************************************/
+/**************************************************/
+.view-sac-menu-section {
+	padding: 0 40px 0 20px;
+}
+.view-sac-menu-item {
+	float: left;
+	padding: 0 20px;
+	width: 760px;
+}
+.view-sac-menu-section .views-row {
+	clear: both;
+	font-weight: bold;
+	margin: 0 0 20px;
+	width: 100%;
+}
+.view-sac-menu-section .views-field-field-display-title h2 {
+	background: #152228;
+	color: #FFF;
+	font-size: 1.25em;
+	font-weight: normal;
+	line-height: 44px;
+	margin: 40px 0 20px;
+	padding: 0 20px;
+	text-transform: uppercase;
+}
+.path-menu .field-type-text-with-summary {
+	clear: both;
+	font-weight: normal;
+	margin: 0 20px 20px;
+}
+.views-field-title {
+	float: left;
+	margin-right: 20px;
+}
+.views-field-field-rm-price-1,
+.views-field-field-rm-price-1-label,
+.views-field-field-rm-price-2,
+.views-field-field-rm-price-2-label {
+	float: right;
+	margin-left: 10px;
+}
+.views-field-field-rm-item-description {
+	clear: both;
+	font-weight: normal;
+	padding: 10px 30px 0;
+}
+
+/**************************************************/
+/*** IE Fixes *************************************/
+/**************************************************/
+.oldie body > header {
+	z-index: 2;
+}
+.oldie .page {
+	position: relative;
+}
+
+
+
+.ie7 .header nav li {
+	display: inline;
+	zoom: 1;
+}
+/**************************************************/
+.ie7 .view-display-id-rest_review_listing > div {
+	border-top: 2px solid #152228;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.ie7 .view-display-id-rest_review_listing div * {
+	border-top: 0 none;
+	margin-top: 0;
+	padding-top: 0;
+}
+.ie7 .view-display-id-rest_review_listing > div:first-child {
+	border-top: 0 none;
+	margin-top: 40px;
+	padding-top: 0;
+}
+.ie7 .view-display-id-rest_review_listing .views-field-field-rr-quote-text {
+	margin-bottom: 10px;
+}
+/**************************************************/
+.ie7 .views-field-field-rm-item-description {
+	margin-top: 5px;
+	padding-top: 0;
+}
+
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+/************************************* : Responsive Design : *************************************/
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+/**************************************************/
+/*** ALL ******************************************/
+/**************************************************/
+@media only screen and (max-width: 879px) {
+
+	body {
+		padding: 10px 0;
+	}
+	* {
+		-webkit-text-size-adjust: none;
+	}
+	img {
+		max-width: 100% !important;
+	}
+
+}
+
+/**************************************************/
+/*** Less than iPad *******************************/
+/**************************************************/
+@media only screen and (max-width: 767px) {
+
+	#block-views-site-tweets-block {
+		background: #152228 !important;
+		padding: 10px 10px 0;
+		position: static;
+	}
+	#block-views-restaurant-information-block {
+		background: #152228 !important;
+		height: 80px;
+		padding: 0 10px;
+		position: static;
+	}
+	#block-views-restaurant-information-block .views-row > div {
+		float: left;
+		margin: 0;
+	}
+	#block-views-restaurant-information-block .views-row > div:nth-child(2n+1) {
+		clear: both;
+	}
+	#block-views-restaurant-information-block .views-row > div:nth-child(2n+2) {
+		float: right;
+	}
+/**************************************************/
+	article.node-page {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.front article.node-page {
+		margin-top: 0;
+	}
+	article.node-page .content {
+		padding: 10px;
+	}
+/**************************************************/
+	#block-block-13 {
+		margin: 0 0 20px 10px;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block-5,
+	#block-block-2 {
+		margin: 0 0 20px 10px;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block-5 .view-restaurant-information {
+		font-size: 1.0625em;
+	}
+/**************************************************/
+	#block-block-5 {
+		margin-left: 10px;
+	}
+/**************************************************/
+	.fb-like-box {
+		display: block !important;
+		margin: 0 auto;
+		width: 100%;
+	}
+/**************************************************/
+	#block-block-7 {
+		border-top: 2px solid #152228;
+		clear: both;
+		float: left;
+		margin: 0 0 20px 10px;
+		padding-top: 20px;
+	}
+	#yelpreviews .yelpuser {
+		width: 80px;
+	}
+/**************************************************/
+	.view-display-id-rest_review_listing {
+		margin: 20px 10px 20px;
+	}
+	.view-display-id-rest_review_listing .views-field-field-rr-images {
+		margin: 0;
+		width: 100%;
+	}
+	.view-display-id-rest_review_listing .views-field-field-rr-images img {
+		display: block;
+		margin: 0 auto;
+	}
+	.view-display-id-rest_review_listing .views-field-field-rr-quote-text {
+		clear: both;
+		padding: 0 10px;
+		text-align: center;
+	}
+	.view-display-id-rest_review_listing .views-field-field-review-link-1	{
+		line-height: 1.1;
+		width: 50%;
+	}
+	.view-display-id-rest_review_listing .views-field-field-rr-by	{
+		line-height: 1.1;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+/**************************************************/
+/*** Mobile Menu Accordion ************************/
+/**************************************************/
+@media only screen and (max-width: 599px) {
+	.view-sac-menu-section {
+		padding-left: 0;
+		width: 100%;
+	}
+	.view-sac-menu-section > .views-row {
+		clear: both;
+		float: left;
+		font-weight: normal; 
+		height: 44px;
+		margin: 0 0 5px ;
+		overflow: hidden;
+		width: 100%;
+	}
+	.view-sac-menu-section > .views-row:first-child {
+		margin-top: 10px;
+	}
+	.view-sac-menu-section .views-row h2 {
+		background: #152228;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		border-radius: 5px;
+		clear: both;
+		color: #FFF;
+		cursor: pointer;
+		float: left;
+		font-size: 1.125em;
+		line-height: 44px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+	}
+	.view-sac-menu-item {
+		float: none;
+	} 
+	.view-sac-menu-section .views-row h2:hover {
+		background: #2C383D;
+		text-decoration: none;
+	}
+	.view-sac-menu-section .content {
+		clear: both;
+	}
+	.view-sac-menu-section article {
+		clear: both;
+		width: 100%;
+	}
+	.view-sac-menu-section .views-row {
+		clear: none;
+	}
+	.views-field-field-rm-price-1,
+	.views-field-field-rm-price-2 {
+		clear: both;
+	}
+	.path-menu .field-type-text-with-summary {
+		margin: -20px 20px 20px;
+	}
+	.path-menu .node-page .field-type-text-with-summary {
+		margin-top: 0;
+	}
+}
+
+/**************************************************/
+/*** Mobile - Portrait ****************************/
+/**************************************************/
+@media only screen and (max-width: 479px) {
+
+	body > header,
+	body > div,
+	body > footer	{
+		padding: 0;
+		width: 310px;
+	}
+	.view-display-id-rest_review_listing,
+	#block-block-7,
+	#block-views-site-tweets-block,
+	#block-views-restaurant-information-block,
+	#block-block-13,
+	#block-block-13 object,
+	#block-block-13 object *,
+	#block-views-restaurant-information-block-5,
+	#block-block-2 {
+		width: 290px;
+	}
+/**************************************************/
+	.logo {
+		left: 20px;
+		top: 20px;
+		width: 80px;
+	}
+	.header {
+		padding-bottom: 5px;
+	}
+	.header_logo p {
+		font-size: 25px;
+		letter-spacing: 1px;
+		padding-left: 95px;
+		text-shadow: -2px 1px 4px #AAA;
+	}
+	.header nav ul {
+		padding-left: 0;
+	}
+	.header nav li {
+		float: left;
+		width: 50%;
+	}
+	.header nav li + li {
+		margin-left: 0;
+	}
+	.header nav li a {
+		float: left;
+		width: 144px;
+	}
+	.header nav li:nth-child(2n+1) a {
+		padding-left: 11px;
+	}
+	.header nav li:nth-child(2n+2) a {
+		padding-right: 11px;
+		text-align: right;
+	}
+/**************************************************/
+	body > footer .views-field {
+		padding: 10px;
+	}
+	.views-field-field-ri-footer {
+		margin: 0 0 10px;
+		width: 290px;
+	}
+	.views-field-field-ri-footer .field-content > div {
+		text-align: center;
+		width: 100%;
+	}
+	.views-field-field-ri-copyright {
+		padding: 10px 50px !important;
+		text-align: center;
+		width: 210px;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block .views-row {
+		font-size: 14px;
+	}
+	#block-views-restaurant-information-block .views-row .views-field-field-ri-email {
+		margin-top: 11px;
+	}
+/**************************************************/
+	.views_slideshow_main,
+	.views_slideshow_main * {
+		height: 105px !important;
+		margin-bottom: 0;
+		width: 310px !important;
+	}
+/**************************************************/
+	.fb-like-box * {
+		max-width: 290px;
+		width: 290px !important;
+	}
+/**************************************************/
+	#yelpreviews header img {
+		height: auto;
+		width: 88px;
+	}
+	#yelpreviews .yelp_review {
+		width: 190px;
+	}
+	#yelpreviews .yelpuser {
+		width: 80px;
+	}
+/**************************************************/
+	#block-block-12 {
+		margin: 0 2px 10px 10px;
+	}
+	.path-reviews	#block-block-9 {
+		margin-left: 72px;
+	}
+	.path-reviews	#block-block-12 {
+		float: left;
+		margin-left: 72px;
+	}
+
+	
+	
+	
+/**************************************************/
+/**************************************************/
+	.views-field-field-rm-section-title {
+		text-align: center;
+	}
+	.block-views .field-type-text-with-summary {
+		padding: 0 10px;
+	}
+	.path-about .field-type-text-with-summary {
+		text-align: left;
+	}
+	.views-field-field-rm-menu-item-prefix {
+		width: auto;
+	}
+	.views-field-title {
+		margin-right: 0;
+		width: 90%;
+	}
+	.views-field-field-rm-item-description	{
+		padding: 10px 10px 10px 20px;
+	}
+	.view-sac-menu-section .views-row h2 {
+		font-size: 17px;
+	}
+	.view-sac-menu-item {
+		width: 270px;
+	}
+
+}
+
+/**************************************************/
+/*** Mobile - Landscape ***************************/
+/**************************************************/
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+
+	body > header,
+	body > div,
+	body > footer {
+		padding: 0;
+	 	width: 470px;
+	}
+	#block-views-site-tweets-block,
+	#block-views-restaurant-information-block,
+	#block-views-restaurant-information-block-5,
+	#block-block-2,
+	.view-display-id-rest_review_listing,
+	#block-block-7
+	{
+		width: 450px;
+	}
+/**************************************************/
+	.logo {
+		left: 30px;
+		top: 22px;
+		width: 90px;
+	}
+	.header_logo p {
+		font-size: 2.1875em;
+		line-height: 1.6;
+		padding-left: 130px;
+	}
+	.header nav {
+		padding: 0 20px;
+	}
+	.header nav ul {
+		padding: 0;
+	}
+	.header nav li {
+		float: left;
+		text-align: left;
+		width: 25%;
+	}
+	.header nav li + li {
+		margin-left: 0;
+	}
+	.header nav li:last-child {
+		text-align: right;
+	}
+/**************************************************/
+	body > footer .views-field {
+		padding: 10px 0;;
+	}
+	.views-field-field-ri-footer {
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	.views-field-field-ri-footer .company {
+		margin-bottom: 5px;
+		text-align: center;
+		width: 100%;
+	}
+	.views-field-field-ri-footer .phone {
+		float: right;
+		padding-right: 5%;
+		text-align: right;
+		width: 45%;
+	}
+	.views-field-field-ri-footer .address {
+		float: left;
+		padding-left: 5%;
+		text-align: left;
+		width: 45%;
+	}
+	.views-field-field-ri-copyright {
+		text-align: center;
+		width: 100%;
+	}
+/**************************************************/
+	.views_slideshow_main,
+	.views_slideshow_main * {
+		height: 158px !important;
+		width: 470px !important;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block .views-row > div {
+		font-size: 0.9em;
+	}
+	#block-views-restaurant-information-block .views-row .views-field-field-ri-email {
+		margin-top: 8px;
+	}
+/**************************************************/
+	#block-block-13	{
+		width: 450px;
+	}
+	#block-block-13 object,
+	#block-block-13 object *	{
+		height: 250px;
+		width: 450px;
+	}
+/**************************************************/
+	#block-block-5 {
+		margin-left: 85px;
+	}
+/**************************************************/
+	#block-block-12 {
+		margin: 0 87px 10px 0;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block-5 p {
+		padding-left: 0 !important;
+		text-align: center;
+	}
+/**************************************************/
+	.fb-like-box,
+	.fb-like-box * {
+		max-width: 450px;
+		width: 450px !important;
+	}
+/**************************************************/
+	#yelpreviews .yelp_review {
+		width: 325px;
+	}
+/**************************************************/
+	.path-reviews #block-block-9 {
+		margin-left: 10px;
+	}
+	.path-reviews #block-block-12 {
+		clear: none;
+		float: right;
+		margin-right: 11px;
+	}
+	
+	
+	
+/**************************************************/
+	.view-sac-menu-item {
+		width: 430px;
+	}
+	.views-field-field-rm-menu-item-prefix {
+		width: 30px;
+	}
+	.views-field-title {
+		margin-right: 0;
+		width: 228px;
+	}
+	.views-field-field-rm-item-description {
+		padding-left: 30px;
+	}
+
+}
+
+
+/**************************************************/
+/*** 7" Tablet ************************************/
+/**************************************************/
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+	body > div,
+	body > footer,
+	body > header	{
+	 	padding: 0;
+	 	width: 590px;
+	}
+	#block-block-7,
+	#block-block-13,
+	.view-display-id-rest_review_listing	{
+	 	width: 570px;
+	}
+/**************************************************/
+	.logo {
+		left: 40px;
+		top: 24px;
+		width: 129px;
+	}
+	.header {
+
+	}
+	.header_logo p {
+		height: 160px;
+		line-height: 1.8;
+		padding-left: 185px;
+	}
+	.header nav {
+		padding: 0 30px;
+	}
+	.header nav ul {
+		padding: 0;
+	}
+	.header nav li {
+		float: left;
+		text-align: left;
+		width: 25%;
+	}
+	.header nav li + li {
+		margin-left: 0;
+	}
+	.header nav li:last-child {
+		text-align: right;
+	}
+/**************************************************/
+	body > footer .views-field {
+		padding: 10px 0;
+	}
+	.views-field-field-ri-footer {
+		margin: 0 0 10px;
+		width: 590px;
+	}
+	.views-field-field-ri-footer .field-content > div {
+		text-align: center;
+		width: 100%;
+	}
+	.views-field-field-ri-copyright {
+		text-align: center;
+	}
+/**************************************************/
+	#block-views-site-tweets-block {
+		height: 106px;
+		width: 263px;
+	}
+	#block-views-site-tweets-block .item-list ul {
+		padding-top: 11px;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block {
+		height: auto;
+		width: 287px;
+	}
+	#block-views-site-tweets-block h2 {
+		margin-top: 8px;
+	}
+	#block-views-restaurant-information-block .views-row {
+		float: left;
+		margin: 10px 0;
+	}
+	#block-views-restaurant-information-block .views-row > div {
+		float: left;
+		margin: 0;
+		font-size: 20px;
+		width: 100%;
+	}
+	#block-views-restaurant-information-block .views-field.views-field-field-credit-cards {
+		position: absolute;
+		right: 19px;
+		top: -63px;
+		width: auto;
+	}
+	#block-views-restaurant-information-block .views-field-field-credit-cards img{
+		float: right;
+		height: auto;
+		width: 80px;
+	}
+/**************************************************/
+	.views_slideshow_main,
+	.views_slideshow_main * {
+		height: 199px !important;
+		width: 590px !important;
+	}
+/**************************************************/
+	#block-block-13 .travel_channel {
+		float: right;
+		margin-left: 10px;
+		width: 260px;
+	}
+	.travel_channel p {
+		margin-top: 30px;
+	}
+	#block-block-13 object {
+		float: right;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block-5 {
+		width: 260px;
+	}
+	#block-views-restaurant-information-block-5 .view-restaurant-information {
+		font-size: 14px;
+		padding: 8px 5px;
+	}
+/**************************************************/
+	#yelpreviews .yelp_review {
+		width: 446px;
+	}
+/**************************************************/
+	#block-block-12 {
+		clear: none;
+		float: left;
+		margin-left: 10px;
+	}
+	.path-reviews	#block-block-9 {
+		margin-left: 10px;
+	}
+	.path-reviews	#block-block-12 {
+		clear: left;
+		margin-left: 10px;
+	}
+	.path-reviews	#block-block-2 {
+		float: none;
+		margin: 0 0 20px 200px;
+		width: 390px;
+	}
+	.path-reviews	.fb-like-box,
+	.path-reviews	.fb-like-box * {
+		max-width: 390px;
+		width: 390px !important;
+	}
+
+	
+	
+/**************************************************/
+	.views-field-title {
+		max-width: 340px;
+	}
+	.path-menu .view-sac-menu-section {
+		float: left;
+		width: 530px;
+	}
+	.view-sac-menu-item {
+		padding: 0 0 0 20px;
+		width: 500px;
+	}
+	.views-field-field-rm-price-1,
+	.views-field-field-rm-price-2 {
+		clear: both;
+	}
+	.path-menu article.node-page {
+		margin: 0;
+	}
+	.path-menu .field-type-text-with-summary {
+		margin-bottom: 0;
+	}
+
+}
+
+/**************************************************/
+/*** Tablet - iPad ********************************/
+/**************************************************/
+@media only screen and (min-width: 768px) and (max-width: 879px) {
+
+	body {
+		padding: 10px 0;
+	}
+	body > header,
+	body > div,
+	body > footer {
+		padding: 0;
+	 	width: 760px;
+	}
+/**************************************************/
+	.logo {
+		right: 30px;
+		top: 30px;
+		width: 120px;
+	}
+	.header_logo p {
+		font-size: 35px;
+		letter-spacing: 4px;
+		padding-left: 30px;
+		text-shadow: -2px 2px 4px #AAA;
+	}
+/**************************************************/
+	body > footer .views-field {
+		padding: 10px 20px;
+		width: 720px;
+	}
+	.views-field-field-ri-footer .company {
+		width: 304px;
+	}
+	.views-field-field-ri-footer .address {
+		width: 316px;
+	}
+/**************************************************/
+	#block-views-site-tweets-block {
+		font-size: 1.125em;
+		height: 75px;
+		top: 15px;
+		width: 240px;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block {
+		height: 140px;
+		font-size: 1.125em;
+		top: 100px;
+		width: 240px;
+	}
+/**************************************************/
+	.views_slideshow_main,
+	.views_slideshow_main * {
+		height: 256px !important;
+		width: 760px !important;
+	}
+/**************************************************/
+	#block-block-7 {
+		width: 280px;
+	}
+/**************************************************/
+	#block-block-13 {
+		width: 280px;
+	}
+	.travel_channel p {
+		font-size: 1.1875em;
+	}
+/**************************************************/
+	#block-block-2,
+	#block-block-2 *,
+	#block-block-13 object,
+	#block-block-13 object *{
+		width: 280px !important;
+	}
+/**************************************************/
+	#block-views-restaurant-information-block-5 {
+		width: 280px;
+	}
+	#block-views-restaurant-information-block-5 .view-restaurant-information {
+		font-size: 1.0625em;
+	}
+/**************************************************/
+	#block-block-7 header img {
+		width: 85px;
+	}
+	#yelpreviews header div {
+		margin-left: 7px;
+	}
+	#block-block-7 .yelpuser {
+		width: 80px;
+	}
+/**************************************************/
+	.view-display-id-rest_review_listing {
+		padding-right: 10px;
+		width: 430px;
+	}
+/**************************************************/
+	#block-block-5 {
+		width: auto;
+	}
+	.yelp_block img {
+		height: auto;
+		width: 104px;
+	}
+/**************************************************/
+	#block-block-12 {
+		margin: 0 28px 10px 0;
+	}
+/**************************************************/
+	article.node-page {
+		padding-right: 10px;
+		width: 425px;
+	}
+/**************************************************/
+	.path-reviews	#block-block-9 {
+		margin-left: 85px;
+	}
+	.path-reviews	#block-block-12 {
+		float: left;
+		margin-left: 85px;
+	}
+/**************************************************/
+	.views-field-title {
+		max-width: 500px;
+	}
+	.view-restaurant-information.view-display-id-block_3 .views-field-body {
+		width: 145px;
+	}
+	.view-sac-menu-item {
+		width: 670px;
+	}
+	.path-menu article.node-page {
+		margin-top: 0;
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+feed icon 
+* ------------------------------------- */
+.feed {text-indent: -9999em;}
+  .feed a.feed-icon{background:transparent url(/misc/feed.png); width:16px; height:16px; display:block;}
+
+/*
+ical icon*/
+a.ical-icon div {background-color:#900; color:#fff; display:inline; padding:2px;}
+
+/*
+file icons
+* ------------------------------------- */
+.file a.file-icon{background: transparent url(/modules/file/icons/text-plain.png) no-repeat left center; padding: 2px 2px 2px 20px;}
+  .file a.mime-application-pdf{background-image: url(/modules/file/icons/application-pdf.png)}
+  .file a.mime-application-octet-stream{background-image: url(/modules/file/icons/application-octet-stream.png)}
+  .file a.mime-application-x-executable{background-image: url(/modules/file/icons/application-x-executable.png)}
+  .file a.mime-audio-x-generic{background-image: url(/modules/file/icons/audio-x-generic.png)}
+  .file a.mime-image-x-generic{background-image: url(/modules/file/icons/image-x-generic.png)}
+  .file a.mime-package-x-generic{background-image: url(/modules/file/icons/package-x-generic.png)}
+  .file a.mime-text-html{background-image: url(/modules/file/icons/text-html.png)}
+  .file a.mime-text-plain{background-image: url(/modules/file/icons/text-plain.png)}
+  .file a.mime-text-x-generic{background-image: url(/modules/file/icons/text-x-generic.png)}
+  .file a.mime-text-x-script{background-image: url(/modules/file/icons/text-x-script.png)}
+  .file a.mime-video-x-generic{background-image: url(/modules/file/icons/video-x-generic.png)}
+  .file a.mime-x-office-document{background-image: url(/modules/file/icons/x-office-document.png)}
+  .file a.mime-x-office-presentation{background-image: url(/modules/file/icons/x-office-presentation.png)}
+  .file a.mime-x-office-spreadsheet{background-image: url(/modules/file/icons/x-office-spreadsheet.png)}
+
+/*
+Tables
+* ------------------------------------- */
+.table-order-asc, .table-order-desc{width:16px; height:16px; float:right}
+.table-order-asc{background: transparent url(/misc/arrow-asc.png) no-repeat center top;}
+.table-order-desc{background: transparent url(/misc/arrow-desc.png) no-repeat center top;}
+

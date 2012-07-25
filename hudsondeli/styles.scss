@@ -1,0 +1,145 @@
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:::::::::::::: Restaurants Platform :::::::::::::://
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//::::::::::::::::::: Hudson Deli :::::::::::::::::://
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Master Site Variables
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+$site-bg-color: #F9F9F9;
+$site-width: 860px;
+$site-padding: 0 20px;
+$site-font: 100%/1.5 "Times New Roman", Times, Baskerville, Georgia, serif;
+$master-color: #152228;
+$secondary-color: #5BA7D8;
+$std-text-color: #666;
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Core Structure
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@import "core";
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Header
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+body > header {
+	margin-bottom: 20px;
+}
+.logo {
+	float: left;
+	width: 300px;
+}
+.logo img {
+	height: 200px;
+	width: 280px;
+}
+.header {
+	float: right;
+	width: 540px;
+}
+.header nav {
+
+}
+.header nav ul {
+	background: url(/sites/default/files/checker_bar.jpg) no-repeat bottom right;
+	float: right;
+	margin-bottom: 5px;
+	padding-bottom: 25px;
+	width: 540px;	
+}
+.header nav li {
+	display: inline;
+	font-size: 24px;
+}
+.header nav li + li {
+	margin-left: 68px;
+}
+.header nav li a {
+	color: #000;
+	text-decoration: none;
+}
+.header nav li.active-trail a,
+.header nav li a:active,
+.header nav li a:hover {
+	color: green;
+}
+.active-trail {
+	font-weight: normal;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Footer
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include footer($site-bg-color, $site-width);
+.views-field-field-ri-footer {
+	border: 1px solid $std-text-color;
+	width: $site-width - 2px;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information  - Geo Info (Home)
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include hudson-deli-geo-info("#block-views-restaurant-information-block");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include yelp-badge ("#block-block-5");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: UrbanSpoon Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include urban-spoon-badge ("#block-block-9");
+.path-reviews	#block-block-9 {
+	margin-left: 95px;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Trip Advisor Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include trip-advisor-badge ("#block-block-12");
+.path-reviews	#block-block-12 {
+	float: left;
+	margin-left: 95px;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Facebook Plugin
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include facebook ("#block-block-2", 0 0 30px 0);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Reviews Block
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include yelp-reviews("#block-block-7");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Reviews
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include restaurant-reviews(".view-display-id-rest_review_listing");
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Articles
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include articles ("article.node-page", 540px);
+.front article.node-page {
+
+	.content img {
+		clear: both;
+	}
+	p + p img {
+		margin-top: 40px;
+	}
+}
+.path-menu article.node-page {
+	margin-top: 10px;
+	width: 100%;
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Menu
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@include menu ();
+
+

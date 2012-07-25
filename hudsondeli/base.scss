@@ -1,0 +1,629 @@
+
+@mixin body ($font: $site-font, $bgcolor: #fff, $color: $std-text-color) {
+	font: $font;
+  text-align: center;
+  background-color: $bgcolor;
+  color: $color;
+}
+
+
+@mixin body-children ($padding: $site-padding,$width: $site-width) {
+	clear: both;
+	margin: 0 auto;
+	padding: $site-padding;
+	position: relative;
+  text-align: left;
+  width: $width;
+}
+
+@mixin c-f-w {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+@mixin border-radius ($radius) {
+		-moz-border-radius: $radius;
+		-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow ($shadow: -4px 4px 5px 0px $std-text-color) {
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin quote($color: $master-color, $font-size: 1.6em) {
+	color: $color;
+	font-size: $font-size;	
+	font-style: normal;
+}
+
+@mixin quote-before($color: $master-color, $font-size: 1.6em) {
+	@include quote($color: $color, $font-size: $font-size);
+	content: '\201C';
+}
+
+@mixin quote-after($color: $master-color, $font-size: 1.6em){
+	@include quote($color: $color, $font-size: $font-size);
+	content: '\201D';
+}
+
+@mixin link-defaults($color: $std-text-color){
+	color: $color;
+	text-decoration: none;
+		-webkit-transition: color .1s linear;
+		-moz-transition: color .1s linear;
+		-o-transition: color .1s linear;
+		-ms-transition: color .1s linear;
+	transition: color .1s linear;
+}
+
+@mixin link-hover($color: #000, $hover-decoration: underline){
+	color: $color;
+	text-decoration: $hover-decoration;
+}
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Footer
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin footer ($footer-bg-color: $master-color, $footer-width: 820px) {
+
+	body > footer {
+		margin-top: 40px;
+
+		.views-field {
+			padding: 10px 20px;
+		}		
+	}
+ 
+	.views-field-field-ri-footer {
+		background: $footer-bg-color;
+		clear: both;
+		@if lightness($footer-bg-color) > 30% {
+			color: #000;
+		} else {
+			color: #FFF;
+		}
+		float: left;
+		font-size: 0.8em;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		width: $footer-width;
+
+		a {
+		@if lightness($footer-bg-color) > 30% {
+				color: #000;
+			} else {
+				color: #FFF;
+			}
+			text-decoration: none;
+		}		
+ 
+		.company {
+			float: left;
+			width: 340px;
+		}		
+		
+		.phone {
+			float: left;
+			width: 100px;
+		}
+
+		.address {
+			float: left;
+			text-align: right;
+			width: 380px;
+		}
+		
+	}
+
+	.views-field-field-ri-copyright {
+		font-size: 0.7em;
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information - Tweeted Hours
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+
+@mixin site-hours-tweeted ($tweeted-hours-block) {
+	 
+	#{$tweeted-hours-block} {
+		background: $master-color;
+		color: #FFF;
+		float: left;
+		font-size: 1.25em;
+		height: 80px;
+		left: 20px;
+		line-height: 1.2;
+		padding: 10px 20px 0;
+		position: absolute;
+		top: 20px;
+		width: 260px;
+		z-index: 100;
+
+		h2 {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.view-site-tweets {
+			background: #FFF;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			color: $master-color;
+			font-size: 20px;
+			height: 45px;
+			margin-top: 3px;
+			text-align: center;
+		}	
+			
+		.view-site-tweets.two_lines {
+			font-size: 17px;
+			height: 40px;
+			line-height: 1.2;
+			padding: 3px 0 2px;
+
+			.item-list {
+				ul {
+					padding: 0;
+				}		
+				
+				span {
+					span {
+
+					}
+				}
+			}	
+		}
+		
+		.item-list {
+			ul {
+				margin: 0;
+				padding: 9px 0 0;
+			}	
+
+			li {
+				margin: 0;
+				padding: 0 5px;
+			}		
+		}
+	}
+
+	#{$tweeted-hours-block}.contextual-links-region {
+		top: 51px;
+	}
+
+	.rgba #{$tweeted-hours-block}
+	{
+		background: rgba(21,34,40,0.9);
+	}
+	.more-link {
+		@extend .hidden;
+	}
+	
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information  - Geo Info (Home)
+//:: Five Islands
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin five-islands-geo-info ($block) {
+
+	#{$block} {
+		background: $master-color;
+		color: #FFF;
+		float: left;
+		height: 160px;
+		font-size: 1.25em;
+		left: 20px;
+		line-height: 1.2;
+		padding: 0 20px 0;
+		position: absolute;
+		top: 110px;
+		width: 260px;
+		z-index: 100;
+		
+		.views-field-field-ri-address p {
+			display: block;
+			margin-top: 0;
+		}
+		.views-field-field-credit-cards {
+			margin-top: 15px;
+		}
+		a {
+			color: #FFF;
+		}
+	}
+	#{$block}.contextual-links-region {
+		top: 141px;
+	}
+	.rgba #{$block} {
+		background: rgba(21,34,40,0.9);
+	}
+
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Information  - Geo Info (Home)
+//:: Hudson Deli
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin hudson-deli-geo-info ($block) {
+
+	#{$block} {
+		clear: both;
+		color: #000;
+		width: 100%;
+		
+		a {
+			color: #000;
+		}
+	}
+	.views-field-field-ri-address {
+		font-size: 1.625em;
+		text-align: center;
+		
+		a {
+			color: $std-text-color;
+		}
+	}
+	.views-field-field-ri-additional-information {
+		float: left;
+		line-height: 1.1;
+		width: 220px;
+		
+		p + p {
+			margin-top: 0;
+		}
+	}
+	.views-field-field-ri-telephone {
+		float: left;
+	}
+	.views-field-field-credit-cards {
+		float: right;
+	}
+	#{$block}.contextual-links-region {
+
+	}
+
+}
+	
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Slider 
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin main-slide-show ($slideshow-block, $height: 290px, $width: 100%, $margin: 0) {
+	#{$slideshow-block} {
+		float: left;
+		height: $height;
+		line-height: 1.2;
+		margin: $margin;
+		overflow: hidden;
+		width: $width;
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Reviews Block 
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin yelp-reviews ($yelp-wrapper-block) {
+
+	#{$yelp-wrapper-block} {
+		float: left;
+		margin: 0 0 30px 20px;
+		width: 300px;
+	}
+	#yelpreviews {
+		header img {
+			float: left;
+			margin: 0 13px 10px 0;
+		}
+		header div {
+			float: left;
+			margin-top: 10px;
+		}
+		header div img {
+			margin: 0;
+		}
+		article {
+			float: left;
+			margin-top: 10px;
+			width: 100%;
+		}
+		article + article {
+			margin-top: 20px;
+		}
+		.yelp_review {
+			float: right;
+			width: 175px;
+		}
+		.yelp_review .date {
+			font-size: 0.75em;
+		}
+		.yelp_review .review {
+			margin: 0;
+		}
+		.yelp_review .review a {
+			color: $std-text-color;
+			text-decoration: underline;
+		}
+		.yelp_review .review a:hover {
+			color: $master-color;
+		}
+		.yelpuser {
+			float: left;
+			width: 104px;
+		}
+		.yelpuser img {
+			border: 2px solid $std-text-color;
+			@include border-radius(3px);
+		}	
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Restaurant Reviews
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+
+@mixin restaurant-reviews ($restaurant-reviews-block, $block-width: 500px) {
+
+	#{$restaurant-reviews-block} {
+		clear: both;
+		float: right;
+		width: $block-width;
+		> div {
+			clear: both;
+			float: left;
+			width: 100%;
+		}
+		> div + div {
+			border-top: 2px solid $master-color;
+			margin-top: 20px;
+			padding-top: 20px;
+		}
+		.views-field-field-rr-images {
+			float: left;
+			margin: 0 20px 10px 0;
+		}
+		.views-field-field-rr-quote-text {
+			margin-bottom: 5px;
+			font-style: italic;
+		}
+		q {
+			color: $master-color;
+			font-size: 1.25em;
+			line-height: 26px;
+		}
+		.views-field-field-review-link-1 {
+			clear: both;
+			float: left;
+			margin-top: 10px;
+		}
+		.views-field-field-rr-by {
+			float: right;
+			margin-top: 10px;
+		}
+		.views-field-field-rr-by > * {
+			display: inline;
+		}
+		.views-field-field-review-link-1 a {
+			color: $std-text-color;
+			text-decoration: underline;
+		}
+		.views-field-field-review-link-1 a:hover {
+			color: $master-color;
+		}
+	}
+	.path-reviews article.node-page {
+		@extend .hidden;
+	}
+}
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Image/Text/Video
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin image-text-video ($block) {
+
+	#{$block} {
+		float: left;
+		margin: 0 0 30px 20px;
+		width: 300px;
+		
+		object {
+			float: left;
+		}
+	}
+	.travel_channel p {
+		color: $master-color;
+		display: block;
+		font-size: 1.25em;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Seasonal Hours
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin seasonal-hours ($block) {
+
+	#{$block} {
+		background: $master-color;
+		float: left;
+		margin: 0 0 30px 20px;
+		width: 300px;
+
+		h2 {
+			color: #FFF;
+			font-size: 1.25em;
+			font-size: 1.25em;
+			line-height: 2;
+			text-align: center;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.view-restaurant-information {
+			background: #FFF;
+			color: $master-color;
+			font-size: 1.125em;
+			line-height: 1.2;
+			margin: 0 10px 10px;
+			padding: 10px;
+		}
+		p + p {
+			margin-top: 0;
+		}
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Yelp Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin yelp-badge ($block) {
+
+	#{$block} {
+		float: left;
+		margin: 0 0 10px 20px;
+		width: 125px;
+
+		img {
+			float: left;
+		}
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: UrbanSpoon Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin urban-spoon-badge ($block) {
+
+	#{$block} {
+		float: left;
+		margin: 0 0 10px 10px;
+		width: 165px;
+
+		div img {
+			margin: 7px auto 0px;
+		}
+		#us_widget {
+			float: left;
+			width: 163px;
+		}
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Trip Advisor Badge
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin trip-advisor-badge ($block) {
+
+	#{$block} {
+		clear: left;
+		float: right;
+		margin: 0 42px 10px 0;
+		width: 163px;
+	}
+	#CDSWIDEXC {
+		margin: 0 !important;
+		width: 100% !important;
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Facebook
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin facebook ($block, $margin: 0 0 30px 20px, $width: 300px) {
+
+	#{$block} {
+		float: left;
+		margin: $margin;
+		width: $width;
+	}
+	.fb-like-box * {
+		max-width: $width;
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Articles
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin articles ($block, $width: 500px) {
+
+	#{$block} {
+		clear: both;
+		float: right;
+		width: $width;
+
+		a {
+			text-decoration: underline;
+		}
+		.content a {
+			color: $std-text-color;
+			text-decoration: underline;
+		}
+		.content a:hover {
+			color: $master-color;
+		}
+	}
+}
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+//:: Menu Section
+//:::::::::::::::::::::::::::::::::::::::::::::::::://
+@mixin menu ($item-width: 760px) {
+
+	.view-sac-menu-section {
+		padding: 0 40px 0 20px;
+		
+		.views-row {
+			clear: both;
+			font-weight: bold;
+			margin: 0 0 20px;
+			width: 100%;
+		}
+		
+		.views-field-field-display-title h2 {
+			background: $master-color;
+			color: #FFF;
+			font-size: 1.25em;
+			font-weight: normal;
+			line-height: 44px;
+			margin: 40px 0 20px;
+			padding: 0 20px;
+			text-transform: uppercase;
+		}
+	}
+	.view-sac-menu-item {
+		float: left;
+		padding: 0 20px;
+		width: $item-width;
+	}
+	.path-menu .field-type-text-with-summary {
+		clear: both;
+		font-weight: normal;
+		margin: 0 20px 20px;
+	}
+	.views-field-title {
+		float: left;
+		margin-right: 20px;
+	}
+	.views-field-field-rm-price-1,
+	.views-field-field-rm-price-1-label,
+	.views-field-field-rm-price-2,
+	.views-field-field-rm-price-2-label {
+		float: right;
+		margin-left: 10px;
+	}
+	.views-field-field-rm-item-description {
+		clear: both;
+		font-weight: normal;
+		padding: 10px 30px 0;
+	}
+}
+
+

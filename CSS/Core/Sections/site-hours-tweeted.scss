@@ -1,0 +1,79 @@
+// 	Restaurant Information - Tweeted Hours 
+
+@mixin site-hours-tweeted ($tweeted-hours-block) {
+	 
+	#{$tweeted-hours-block} {
+		background: #152228;
+		color: #FFF;
+		float: left;
+		font-size: 1.25em;
+		height: 80px;
+		left: 20px;
+		line-height: 1.2;
+		padding: 10px 20px 0;
+		position: absolute;
+		top: 20px;
+		width: 260px;
+		z-index: 100;
+
+		h2 {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.view-site-tweets {
+			background: #FFF;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			color: #152228;
+			font-size: 20px;
+			height: 45px;
+			margin-top: 3px;
+			text-align: center;
+		}	
+			
+		.view-site-tweets.two_lines {
+			font-size: 17px;
+			height: 40px;
+			line-height: 1.2;
+			padding: 3px 0 2px;
+
+			.item-list {
+				ul {
+					padding: 0;
+				}		
+				
+				span {
+
+					span {
+					
+					}
+				
+				}
+			}	
+		}
+		
+		.item-list {
+			ul {
+				margin: 0;
+				padding: 9px 0 0;
+			}	
+
+			li {
+				margin: 0;
+				padding: 0 5px;
+			}		
+		}
+	}
+
+	#{$tweeted-hours-block}.contextual-links-region {
+		top: 51px;
+	}
+
+	.rgba #{$tweeted-hours-block}
+	{
+		background: rgba(21,34,40,0.9);
+	}
+	
+}

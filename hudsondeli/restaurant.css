@@ -1,0 +1,347 @@
+body {
+  font: 100%/1.5 "Times New Roman", Times, Baskerville, Georgia, serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #666666; }
+
+body > header,
+body > div,
+body > footer {
+  clear: both;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  text-align: left;
+  width: 860px; }
+
+.page > div {
+  clear: both;
+  float: left;
+  width: 100%; }
+
+a, a:link, a:visited, a:active {
+  color: #666666;
+  text-decoration: none;
+  -webkit-transition: color .1s linear;
+  -moz-transition: color .1s linear;
+  -o-transition: color .1s linear;
+  -ms-transition: color .1s linear;
+  transition: color .1s linear; }
+
+a:hover, a:focus {
+  color: black;
+  text-decoration: underline; }
+
+.hidden, h1, .path-reviews article.node-page {
+  display: none; }
+
+.c-f-w {
+  clear: both;
+  float: left;
+  width: 100%; }
+
+p + p {
+  margin-top: 10px; }
+
+q:before,
+q:hover:before {
+  color: #152228;
+  font-size: 1.6em;
+  font-style: normal;
+  content: '\201C'; }
+
+q:after,
+q:hover:after {
+  color: #152228;
+  font-size: 1.6em;
+  font-style: normal;
+  content: '\201D'; }
+
+body > header {
+  margin-bottom: 20px; }
+
+.logo {
+  float: left;
+  width: 300px; }
+
+.logo img {
+  height: 200px;
+  width: 280px; }
+
+.header {
+  float: right;
+  width: 540px; }
+
+.header nav ul {
+  background: url(/sites/default/files/checker_bar.jpg) no-repeat bottom right;
+  float: right;
+  margin-bottom: 5px;
+  padding-bottom: 25px;
+  width: 540px; }
+
+.header nav li {
+  display: inline;
+  font-size: 24px; }
+
+.header nav li + li {
+  margin-left: 68px; }
+
+.header nav li a {
+  color: #000;
+  text-decoration: none; }
+
+.header nav li.active-trail a,
+.header nav li a:active,
+.header nav li a:hover {
+  color: green; }
+
+.active-trail {
+  font-weight: normal; }
+
+body > footer {
+  margin-top: 40px; }
+  body > footer .views-field {
+    padding: 10px 20px; }
+
+.views-field-field-ri-footer {
+  background: #f9f9f9;
+  clear: both;
+  color: #000;
+  float: left;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: 860px; }
+  .views-field-field-ri-footer else {
+    color: #FFF; }
+  .views-field-field-ri-footer a {
+    color: #000;
+    text-decoration: none; }
+    .views-field-field-ri-footer a else {
+      color: #FFF; }
+  .views-field-field-ri-footer .company {
+    float: left;
+    width: 340px; }
+  .views-field-field-ri-footer .phone {
+    float: left;
+    width: 100px; }
+  .views-field-field-ri-footer .address {
+    float: left;
+    text-align: right;
+    width: 380px; }
+
+.views-field-field-ri-copyright {
+  font-size: 0.7em; }
+
+.views-field-field-ri-footer {
+  border: 1px solid #666666;
+  width: 858px; }
+
+#block-views-restaurant-information-block {
+  clear: both;
+  color: #000;
+  width: 100%; }
+  #block-views-restaurant-information-block a {
+    color: #000; }
+
+.views-field-field-ri-address {
+  font-size: 1.625em;
+  text-align: center; }
+  .views-field-field-ri-address a {
+    color: #666666; }
+
+.views-field-field-ri-additional-information {
+  float: left;
+  line-height: 1.1;
+  width: 220px; }
+  .views-field-field-ri-additional-information p + p {
+    margin-top: 0; }
+
+.views-field-field-ri-telephone {
+  float: left; }
+
+.views-field-field-credit-cards {
+  float: right; }
+
+#block-block-5 {
+  float: left;
+  margin: 0 0 10px 20px;
+  width: 125px; }
+  #block-block-5 img {
+    float: left; }
+
+#block-block-9 {
+  float: left;
+  margin: 0 0 10px 10px;
+  width: 165px; }
+  #block-block-9 div img {
+    margin: 7px auto 0px; }
+  #block-block-9 #us_widget {
+    float: left;
+    width: 163px; }
+
+.path-reviews #block-block-9 {
+  margin-left: 95px; }
+
+#block-block-12 {
+  clear: left;
+  float: right;
+  margin: 0 42px 10px 0;
+  width: 163px; }
+
+#CDSWIDEXC {
+  margin: 0 !important;
+  width: 100% !important; }
+
+.path-reviews #block-block-12 {
+  float: left;
+  margin-left: 95px; }
+
+#block-block-2 {
+  float: left;
+  margin: 0 0 30px 0;
+  width: 300px; }
+
+.fb-like-box * {
+  max-width: 300px; }
+
+#block-block-7 {
+  float: left;
+  margin: 0 0 30px 20px;
+  width: 300px; }
+
+#yelpreviews header img {
+  float: left;
+  margin: 0 13px 10px 0; }
+#yelpreviews header div {
+  float: left;
+  margin-top: 10px; }
+#yelpreviews header div img {
+  margin: 0; }
+#yelpreviews article {
+  float: left;
+  margin-top: 10px;
+  width: 100%; }
+#yelpreviews article + article {
+  margin-top: 20px; }
+#yelpreviews .yelp_review {
+  float: right;
+  width: 175px; }
+#yelpreviews .yelp_review .date {
+  font-size: 0.75em; }
+#yelpreviews .yelp_review .review {
+  margin: 0; }
+#yelpreviews .yelp_review .review a {
+  color: #666666;
+  text-decoration: underline; }
+#yelpreviews .yelp_review .review a:hover {
+  color: #152228; }
+#yelpreviews .yelpuser {
+  float: left;
+  width: 104px; }
+#yelpreviews .yelpuser img {
+  border: 2px solid #666666;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.view-display-id-rest_review_listing {
+  clear: both;
+  float: right;
+  width: 500px; }
+  .view-display-id-rest_review_listing > div {
+    clear: both;
+    float: left;
+    width: 100%; }
+  .view-display-id-rest_review_listing > div + div {
+    border-top: 2px solid #152228;
+    margin-top: 20px;
+    padding-top: 20px; }
+  .view-display-id-rest_review_listing .views-field-field-rr-images {
+    float: left;
+    margin: 0 20px 10px 0; }
+  .view-display-id-rest_review_listing .views-field-field-rr-quote-text {
+    margin-bottom: 5px;
+    font-style: italic; }
+  .view-display-id-rest_review_listing q {
+    color: #152228;
+    font-size: 1.25em;
+    line-height: 26px; }
+  .view-display-id-rest_review_listing .views-field-field-review-link-1 {
+    clear: both;
+    float: left;
+    margin-top: 10px; }
+  .view-display-id-rest_review_listing .views-field-field-rr-by {
+    float: right;
+    margin-top: 10px; }
+  .view-display-id-rest_review_listing .views-field-field-rr-by > * {
+    display: inline; }
+  .view-display-id-rest_review_listing .views-field-field-review-link-1 a {
+    color: #666666;
+    text-decoration: underline; }
+  .view-display-id-rest_review_listing .views-field-field-review-link-1 a:hover {
+    color: #152228; }
+
+article.node-page {
+  clear: both;
+  float: right;
+  width: 540px; }
+  article.node-page a {
+    text-decoration: underline; }
+  article.node-page .content a {
+    color: #666666;
+    text-decoration: underline; }
+  article.node-page .content a:hover {
+    color: #152228; }
+
+.front article.node-page .content img {
+  clear: both; }
+.front article.node-page p + p img {
+  margin-top: 40px; }
+
+.path-menu article.node-page {
+  margin-top: 10px;
+  width: 100%; }
+
+.view-sac-menu-section {
+  padding: 0 40px 0 20px; }
+  .view-sac-menu-section .views-row {
+    clear: both;
+    font-weight: bold;
+    margin: 0 0 20px;
+    width: 100%; }
+  .view-sac-menu-section .views-field-field-display-title h2 {
+    background: #152228;
+    color: #FFF;
+    font-size: 1.25em;
+    font-weight: normal;
+    line-height: 44px;
+    margin: 40px 0 20px;
+    padding: 0 20px;
+    text-transform: uppercase; }
+
+.view-sac-menu-item {
+  float: left;
+  padding: 0 20px;
+  width: 760px; }
+
+.path-menu .field-type-text-with-summary {
+  clear: both;
+  font-weight: normal;
+  margin: 0 20px 20px; }
+
+.views-field-title {
+  float: left;
+  margin-right: 20px; }
+
+.views-field-field-rm-price-1,
+.views-field-field-rm-price-1-label,
+.views-field-field-rm-price-2,
+.views-field-field-rm-price-2-label {
+  float: right;
+  margin-left: 10px; }
+
+.views-field-field-rm-item-description {
+  clear: both;
+  font-weight: normal;
+  padding: 10px 30px 0; }
